@@ -18,7 +18,7 @@ In order to reduce data storage, data is only stored in configurable time interv
 ![ScreenShot](/docs/images/city_sense.png)
 
 ## The Hardware prototype
-![ScreenShot](/docs/images/citysense_node.png)
+![ScreenShot](/docs/images/citysense_node.jpg)
 
 ## Circuit Diagram 
 The full schematic of our completed prototype will look like the following:
