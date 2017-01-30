@@ -5,11 +5,12 @@
 citySense is an urban IoT sensing platform, that allows researchers to collect, analyze and visualize real-time data on the city's infrastructure and citizens' activity (with respect to their privacy). 
 
 ## What is citySense ? 
-The system consists of a IoT sensor nodes placed on streetlight poles and connected to the network. Each IoT node is geographically localized, so that IoT data can be enhanced with context information.
+The system consists of three components: 
+(1) citySense network: The system is powered by a network of modular IoT sensor nodes (that can be placed on streetlight poles). Each IoT node consists of a set of sensors to sense the pulse of the city. 
+(2) citySense brain: A modular processing framework to process and analyze the data.
+(3) citySense dashboard: Map-centered web dashboard to showcase the results. 
 
-The system is powered by a network of modular IoT sensor nodes (that can be placed on streetlight poles). Each IoT node consists of a set of sensors to sense the pulse of the city. The collected data will be stored in a centralized database, and can be visualized through a map-centeric dashboard. 
-
-In every IoT sensor node, an Arduino (Nano) connected to the Raspberry Pi via USB, is used with a set of sensors to monitor temperature, humidity, carbon monoxide (CO), sound, solar radiation, Bluetooth signals, Wi-Fi hotspots, and battery charge level. The Arduino is powerd through the USB socket and uses the built in USB-to-serial connection to communicate with the Raspberry Pi.
+In every IoT sensor node, an Arduino (Nano) connected to a Raspberry-Pi via USB, is used with a set of sensors to monitor temperature, humidity, carbon monoxide (CO), sound, solar radiation, Bluetooth signals, Wi-Fi hotspots, and battery charge level. The Arduino is powerd through the USB socket and uses the built in USB-to-serial connection to communicate with the Raspberry Pi.
 
 Each station is configured to fetch and pull data to a database. The data is stored in a NoSQL-database (MongoDB), that can be installed on a local or remote server. 
 
@@ -20,9 +21,6 @@ In order to reduce data storage, data is only stored in configurable time interv
 ## The Hardware prototype
 ![ScreenShot](/docs/images/citysense_node.jpg)
 
-## Circuit Diagram 
-The full schematic of our completed prototype will look like the following:
-![ScreenShot](/docs/images/arduino_circuit_diagram.png)
 
 ## Code Structure  
     +- citySense IoT Platform 
