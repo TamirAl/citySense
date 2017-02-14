@@ -13,4 +13,4 @@ def get_last_item_sensor(sensor_id):
 	cursor = environment_collection.find({"sensor_id": sensor_id}, {"_id": False}).sort("timestamp", pymongo.DESCENDING).limit(1)
 	cursor_records = list(cursor)[0]
 	
-	return jsonify(json_data)
+	return jsonify(cursor_records)
