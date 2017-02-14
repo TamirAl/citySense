@@ -6,8 +6,11 @@ citySense is an urban IoT sensing platform, that allows researchers to collect, 
 
 ## What is citySense ? 
 The system consists of three components: 
+
 (1) citySense network: The system is powered by a network of modular IoT sensor nodes (that can be placed on streetlight poles). Each IoT node consists of a set of sensors to sense the pulse of the city. 
-(2) citySense brain: A modular processing framework to process and analyze the data.
+
+(2) citySense analyzer: A modular processing framework to process and analyze the data.
+
 (3) citySense dashboard: Map-centered web dashboard to showcase the results. 
 
 In every IoT sensor node, an Arduino (Nano) connected to a Raspberry-Pi via USB, is used with a set of sensors to monitor temperature, humidity, carbon monoxide (CO), sound, solar radiation, Bluetooth signals, Wi-Fi hotspots, and battery charge level. The Arduino is powerd through the USB socket and uses the built in USB-to-serial connection to communicate with the Raspberry Pi.
@@ -38,10 +41,11 @@ In order to reduce data storage, data is only stored in configurable time interv
     |  |  | +- Bluetooth Occupancy Sensing 
     |  |  | +- Wifi Occupancy Sensing 
     |  |  +- 3D Sketch: 3d package design  
-    |  +- citySense: Dashboard
-    |  +- citySense: Restful API
+    |  +- citySense_webapp: Dashboard
+    |  +- citySense_api: Restful API to fetch hestorical data
 
 ## Getting Started 
+
 ### Remote Server 
 - Install mongo database on a server 
 ```sh
