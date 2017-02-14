@@ -1,11 +1,12 @@
 ![MIT license](https://img.shields.io/badge/licence-MIT-blue.svg)
+![Dev](https://img.shields.io/badge/status-under--developement-green.svg?style=under-developement)
 
 # citySense
 
-citySense is an urban IoT sensing platform, that allows researchers to collect, analyze and visualize real-time data on the city's infrastructure and citizens' activity (with respect to their privacy). 
+citySense is an urban IoT sensing tool, that allows researchers to collect, analyze and visualize real-time data on the city's infrastructure and citizens' activity (with respect to their privacy). 
 
 ## What is citySense ? 
-The system consists of three components: 
+The tool consists of three components: 
 
 (1) citySense network: The system is powered by a network of modular IoT sensor nodes (that can be placed on streetlight poles). Each IoT node consists of a set of sensors to sense the pulse of the city. 
 
