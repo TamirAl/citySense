@@ -13,10 +13,10 @@ import logging
 
 
 class BluetoothSniffer(Thread):
-    def __init__(self, sensor_node_id):
+    def __init__(self, sensor_node_id, kafka_topic= 'bluetooth'):
         Thread.__init__(self)
         self.sensor_node_id = sensor_node_id
-        self.kafka_topic = 'bluetooth'
+        self.kafka_topic = kafka_topic
         self.kafka_server = '{}:{}'.format(KAFKA_SERVER,KAFKA_PORT)
         #self.kafka_producer = KafkaProducer(bootstrap_servers=['{}:{}'.format(KAFKA_SERVER,KAFKA_PORT) ])
 
@@ -51,12 +51,9 @@ class BluetoothSniffer(Thread):
             while True:
 
                 output, error = self.start_monitor_mode()
-                print output.split('\n\n')  
                 for packet in output[0].split('\n\n')[1:-1]:
                     parsed_data = self.parse_data(packet)
-                    print BluetoothSensorPacket(parsed_data).to_json()
-                    # send data to Kafka
-                    #self.kafka_producer.send(self.kafka_topic, BluetoothSensorPacket(parsed_data).to_json())
+                    self.kafka_producer.send(self.kafka_topic, BluetoothSensorPacket(parsed_data).to_json())
 
                 #time.sleep(10)
         

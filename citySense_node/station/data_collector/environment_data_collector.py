@@ -16,10 +16,10 @@ import serial
 
 
 class EnvironmentDataCollector(Thread):
-    def __init__(self, sensor_node_id):
+    def __init__(self, sensor_node_id, kafka_topic= 'environment'):
         Thread.__init__(self)
         self.sensor_node_id = sensor_node_id
-        self.kafka_topic = 'weather'
+        self.kafka_topic = kafka_topic
         self.kafka_server = '{}:{}'.format(KAFKA_SERVER,KAFKA_PORT) 
         self.kafka_producer = KafkaProducer(bootstrap_servers=['{}:{}'.format(KAFKA_SERVER,KAFKA_PORT) ])
 

@@ -1,0 +1,7 @@
+host: <server>
+port: 27017
+db_name: <db_name>
+collections:
+  wifidevices: 'wifidevices'
+  environment: 'environment'
+  bluetoothdevices: 'bluetoothdevices'

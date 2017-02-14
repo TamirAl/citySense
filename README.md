@@ -95,6 +95,16 @@ python run_node_listener.py
 - Place the station with access to the WIFI, and it will start collecting data. 
 - For more convinient, you can use startup script to start data collection automatically without a need to any other interface. The pi can run the script on startup mode. 
 
+
+### citySense-Webapp
+
+Using a minimal dashboard to see the last updated data from the sensors. The dashboard takes a form of a map-centered UI where you can click on a sensor on map to see the related values in widgets.
+
+Below, you can see the minimal webapp.
+
+![ScreenShot](/docs/images/citysense_screen_shot.png)
+
+
 ## Support
 If you are having issues, please let us know or submit a pull request.
 

@@ -1,0 +1,128 @@
+{% extends "base.html" %} {% block title %} CitySense: Urban Sensing IoT Platform {% endblock %} {% block content %}
+
+<body>
+    <nav class="navbar navbar-inverse navbar-embossed palette-peter-river" role="navigation">
+        <div class="navbar-header">
+            <h3>City Sense</h3>
+            <span>Urban IoT Sensing Platform</span>
+        </div>
+    </nav>
+    <!-- map-container -->
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <!--/ map-container -->
+    <!-- container-fluid -->
+    <div class="container-fluid">
+        <!-- row-->
+        <div class="row">
+            <!-- Left side  -->
+            <div class="col-xs-3 no-padding">
+                <!-- Panel -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Temperature</h2>
+                    </div>
+                    <div class="panel-body palette-peter-river">
+                        <div class="row">
+                            <!-- icon  -->
+                            <div class="col-xs-6 text-center">
+                                <div class="number_icon">
+                                    <h1 class="bolded degrees white-text" id="temperature_value"><i class="wi wi-degrees"></i></h1>
+                                </div>
+                            </div>
+                            <!--/ icon  -->
+                            <!-- icon  -->
+                            <div class="col-xs-6">
+                                <div class="icon">
+                                    <div class="wi wi-day-sunny"></div>
+                                </div>
+                            </div>
+                            <!--/ icon  -->
+                        </div>
+                    </div>
+                </div>
+                <!--/ Panel -->
+                <!-- Panel -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Humidity</h2>
+                    </div>
+                    <div class="panel-body palette-peter-river">
+                        <div class="row">
+                            <!-- icon  -->
+                            <div class="col-xs-6 text-center">
+                                <div class="number_icon">
+                                    <h2 class="bolded degrees white-text" id="humidity_value"></h2>
+                                </div>
+                            </div>
+                            <!--/ icon  -->
+                            <!-- icon  -->
+                            <div class="col-xs-6">
+                                <div class="icon">
+                                    <div class="wi wi-humidity"></div>
+                                </div>
+                            </div>
+                            <!--/ icon  -->
+                        </div>
+                    </div>
+                </div>
+                <!--/ Panel -->
+                <!-- Panel -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Crowd</h2>
+                    </div>
+                    <div class="panel-body palette-peter-river">
+                        <div class="row">
+                            <!-- icon  -->
+                            <div class="col-xs-6 text-center">
+                                <div class="number_icon">
+                                    <h2 class="bolded degrees white-text" id="crowd_value"></h2>
+                                </div>
+                            </div>
+                            <!--/ icon  -->
+                            <!-- icon  -->
+                            <div class="col-xs-6">
+                                <div class="icon">
+                                    <div class="fa fa-users"></div>
+                                </div>
+                            </div>
+                            <!--/ icon  -->
+                        </div>
+                    </div>
+                </div>
+                <!--/ Panel -->
+                <!-- Panel -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">CO2</h2>
+                    </div>
+                    <div class="panel-body palette-peter-river">
+                        <div class="row">
+                            <!-- icon  -->
+                            <div class="col-xs-6 text-center">
+                                <div class="number_icon">
+                                    <h2 class="bolded degrees white-text" id="co2_value"></h2>
+                                </div>
+                            </div>
+                            <!--/ icon  -->
+                            <!-- icon  -->
+                            <div class="col-xs-6">
+                                <div class="icon">
+                                    <div class="wi wi-barometer"></div>
+                                </div>
+                            </div>
+                            <!--/ icon  -->
+                        </div>
+                    </div>
+                </div>
+                <!--/ Panel -->
+            </div>
+            <!--/ Left side  -->
+        </div>
+        <!--/ row -->
+    </div>
+    <!--/ container-fluid -->
+</body>
+{% endblock %}
